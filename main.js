@@ -27,5 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
             renderTasks();
             taskDescriptionInput.value = '';
         }
- 
+    });
+
+    // Marca ou desmarca uma tarefa como concluída
+    function toggleTaskCompletion(taskId) {
+        const task = tasks.find(task => task.id === taskId);
+        if (task) {
+            task.completed = !task.completed;
+            renderTasks();
+        }
+    }
+
 });
