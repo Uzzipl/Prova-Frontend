@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addTaskButton = document.getElementById('addTaskButton');
     const taskList = document.getElementById('taskList');
     const taskCount = document.getElementById('taskCount');
+    const completedTaskCount = document.getElementById('completedTaskCount');
 
     let tasks = [];
 
@@ -10,5 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateTaskCount() {
         taskCount.textContent = tasks.length;
     }
-
+    // Adiciona uma nova tarefa
+    addTaskButton.addEventListener('click', () => {
+        const description = taskDescriptionInput.value.trim();
+        if (description) {
+            const taskId = Date.now();
+            tasks.push({ id: taskId, description, completed: false });
+            renderTasks();
+            taskDescriptionInput.value = '';
+        }
+ 
 });
