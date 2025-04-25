@@ -19,9 +19,10 @@ Adição de Tarefas:
 - Tabela com armazenamento dos dados:
   - Listagem de todas as tarefas.
   - Opção de remoção de Itens.
-  -Checkbox para as tarefas concluidas.
-  -Contador de tarefas totais e de concluidas.
-
+  - Checkbox para as tarefas concluidas. 
+  - Contador de tarefas totais e de concluidas. 
+  
+  
 
 ---
 
@@ -32,5 +33,11 @@ Adição de Tarefas:
 - JavaScript
 
 ---
+
+
+# Autor
+
+|  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/170525752?s=400&v=4" width=115><br><sub>Uzires Portugal Laureano</sub>](https://github.com/Uzzipl) |
+| :---: |
 
 
