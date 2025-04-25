@@ -13,7 +13,7 @@ Este é um projeto simples e funcional de um **Gerenciador de tarefas**, feito c
 
 ## 🚀 Funcionalidades
 
-Adição de Tarefas:
+- Adição de Tarefas
   - Campo para descrição (ex: Ler 30 Paginas de um livro)
 
 - Tabela com armazenamento dos dados:
@@ -22,7 +22,7 @@ Adição de Tarefas:
   - Checkbox para as tarefas concluidas. 
   - Contador de tarefas totais e de concluidas. 
   
-  
+
 
 ---
 
