@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
             renderTasks();
         }
     }
+    // Remove uma tarefa
+    function removeTask(taskId) {
+        tasks = tasks.filter(task => task.id !== taskId);
+        renderTasks();
+    }
+
     // Renderiza as tarefas na lista
     function renderTasks() {
         taskList.innerHTML = '';
