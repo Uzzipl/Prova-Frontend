@@ -43,7 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         tasks.forEach(task => {
             const li = document.createElement('li');
 
-            
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.checked = task.completed;
+            checkbox.addEventListener('change', () => toggleTaskCompletion(task.id));
+
             const taskText = document.createElement('span');
             taskText.textContent = task.description;
             if (task.completed) {
