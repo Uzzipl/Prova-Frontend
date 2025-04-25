@@ -37,5 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
             renderTasks();
         }
     }
+    // Renderiza as tarefas na lista
+    function renderTasks() {
+        taskList.innerHTML = '';
+        tasks.forEach(task => {
+            const li = document.createElement('li');
 
+            
+            const taskText = document.createElement('span');
+            taskText.textContent = task.description;
+            if (task.completed) {
+                taskText.style.textDecoration = 'line-through';
+            }
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remover';
+            removeButton.addEventListener('click', () => removeTask(task.id));
+
+            li.appendChild(checkbox);
+            li.appendChild(taskText);
+            li.appendChild(removeButton);
+            taskList.appendChild(li);
+        });
+        updateTaskCount();
+        updateCompletedTaskCount();
+    }
 });
