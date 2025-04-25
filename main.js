@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateTaskCount() {
         taskCount.textContent = tasks.length;
     }
+
+    // Atualiza o contador de tarefas concluídas
+    function updateCompletedTaskCount() {
+        const completedTasks = tasks.filter(task => task.completed).length;
+        completedTaskCount.textContent = completedTasks;
+    }
+
     // Adiciona uma nova tarefa
     addTaskButton.addEventListener('click', () => {
         const description = taskDescriptionInput.value.trim();
