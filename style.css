@@ -1,58 +1,114 @@
+/* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-h1, h2 {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
     color: #333;
 }
 
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+    margin-top: 20px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
 input {
-    padding: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
     margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button {
-    padding: 5px 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 20px auto;
+    max-width: 500px;
 }
 
 li {
-    margin: 5px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-button {
+li span {
+    flex: 1;
+    margin-left: 10px;
+}
+
+li span.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+li button {
     background-color: #f44336;
     color: white;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
+li button:hover {
     background-color: #d32f2f;
 }
-/* Responsividade para telas menores */
-@media (max-width: 600px) {
-    body {
-        margin: 10px;
-    }
 
+li input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
     input {
-        width: 100%; 
-        margin-bottom: 10px; 
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     button {
-        width: 100%; 
+        width: 100%;
     }
 
     li {
@@ -62,6 +118,6 @@ button:hover {
 
     li button {
         margin-top: 10px;
-        width: 100%; 
+        width: 100%;
     }
 }
